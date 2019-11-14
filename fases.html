@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAME</title>
+</head>
+
+<body>
+
+    <script>
+
+        //FASE1
+        console.log("---FASE 1---");
+
+        var arrayName = ["C", "R", "I", "S", "T", "I", "N", "A"];
+        for (var i = 0; i < arrayName.length; i++) {
+            console.log(arrayName[i]);
+        }
+
+        //FASE2
+        console.log("---FASE 2---");
+
+        var arrayName = ["C", "R", 1, "S", "T", "I", "N", "A"];
+        console.log("Partimos del nombre: '" + arrayName.join("") + "'.");
+
+        for (var i = 0; i < arrayName.length; i++) {
+            if (!isNaN(arrayName[i].toString())) {
+                console.log("No puede contener NÚMEROS: " + arrayName[i]);
+            } else if (arrayName[i] === "A" || arrayName[i] === "E" || arrayName[i] === "I" || arrayName[i] === "O" || arrayName[i] === "U") {
+                console.log("He encontrado una VOCAL: " + arrayName[i]);
+            } else {
+                console.log("He encontrado una CONSONANTE: " + arrayName[i]);
+            }
+        }
+
+        //FASE3
+        console.log("---FASE 3---");
+
+        var arrayName = ["C", "R", "I", "S", "T", "I", "N", "A"];
+        var arrayNumbers = [];
+
+        arrayName.map(letter => {
+            if (!arrayNumbers.hasOwnProperty(letter)) {
+                arrayNumbers[letter] = 1;
+            } else {
+                arrayNumbers[letter] += 1;
+            }
+        });
+
+        console.log("Contador de letras: ", arrayNumbers);
+
+        //FASE4
+        console.log("---FASE 4---");
+
+        var arrayName = ["C", "R", "I", "S", "T", "I", "N", "A"];
+        var arraySurname = ["C", "I", "D"];
+        var fullName = arrayName.concat(" ", arraySurname);
+
+        console.log("El nombre completo: ", fullName);
+
+    </script>
+
+</body>
+
+</html>
